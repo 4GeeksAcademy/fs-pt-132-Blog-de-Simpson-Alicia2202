@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import SimpsonApi from "../services/SimpsonAPI.js";
-import CharacterSlider from "../components/Slider.jsx";
+import CharacterSlider from "../components/CharacterSlider.jsx";
 
 export const Home = () => {
 
