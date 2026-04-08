@@ -8,6 +8,7 @@ const CharacterDetail = () => {
   // const { store } = useGlobalReducer();
   const {getSingleCharacter}= SimpsonApi
   const [character,setCharacter] = useState({});
+  const image = 'https://cdn.thesimpsonsapi.com/500' + character.portrait_path
 
   useEffect(() =>{
     getSingleCharacter(id).then (data => setCharacter(data))
@@ -29,7 +30,7 @@ const CharacterDetail = () => {
         
         <div className="col-md-4 p-0 bg-warning d-flex align-items-center justify-content-center">
           <img
-            src={character.image}
+            src={image}
             className="img-fluid p-4"
             alt={character.name}
             style={{ maxHeight: "400px", objectFit: "contain" }}
