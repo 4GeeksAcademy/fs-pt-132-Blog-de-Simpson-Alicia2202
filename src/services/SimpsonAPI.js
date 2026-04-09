@@ -12,7 +12,7 @@ SimpsonApi.getCharacters = async (limit = 20) => {
         
     } catch (error) {
         console.error("Error cargando personajes:", error);
-        return {docs:[]};
+        return [];
     }
 }
 
@@ -27,5 +27,30 @@ SimpsonApi.getSingleCharacter = async (id) => {
         return null;
     }
 }
+
+SimpsonApi.getEpisodes = async (limit=20) => {
+    try {
+        const resp = await fetch(url + "/episodes?limit="+limit);
+        if (!resp.ok) throw new Error ('Error getting episodes');
+        const data = await resp.json ();
+        return data
+    } catch (error) {
+        console.log(error);
+        return [];
+    }
+}
+
+SimpsonApi.getSingleEpisode = async (id) => {
+    try {
+        const resp = await fetch (url + "/episodes/" + id);
+        if (!resp.ok) throw new Error ('Error getting episode');
+        const data = await resp.json();
+        return data
+    } catch (error) {
+        console.log(error);
+        return null;
+    }
+}
+
 
 export default SimpsonApi;
