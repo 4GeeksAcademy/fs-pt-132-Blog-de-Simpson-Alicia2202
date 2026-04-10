@@ -8,11 +8,11 @@ export const Navbar = () => {
     <nav className="navbar navbar-light bg-light mb-3">
       <div className="container">
         <Link to="/">
-          <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/9/98/The_Simpsons_yellow_logo.svg" 
-              alt="The Simpsons Logo" 
-              style={{ height: "60px", minWidth: "120px" }}
-            />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/98/The_Simpsons_yellow_logo.svg"
+            alt="The Simpsons Logo"
+            style={{ height: "60px", minWidth: "120px" }}
+          />
         </Link>
         <div className="ml-auto dropdown">
           <button
