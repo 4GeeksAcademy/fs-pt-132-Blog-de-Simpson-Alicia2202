@@ -5,7 +5,7 @@ const CharacterSlider = ({characters}) => {
     const topTen = characters.slice(0,10);
 
     return(
-        <div className="bg-light py-5 mb-5 border-bottom">
+        <div className="bg-light py-5 mb-5 border-bottom slider-character">
             <div className="container">
                 <h2 className="text-center mb-4 fw-bold text-uppercase ">Personajes Destacados</h2>
                 <div className="d-flex flex-row flex-nowrap overflow-auto pb-4 custom-scrollbar">
